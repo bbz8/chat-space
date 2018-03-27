@@ -13,13 +13,13 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, unique index: true|
-|email|integer|null: false, unique: true|
+|name|string|null: false, unique: true, add_index: true|
+|email|string|null: false, unique: true|
 
 ### Association
 - has_meny :members
 - has_many :messages
-- has_meny :groups, :through: :members
+- has_meny :groups, through: :members
 
 ## messeagesテーブル
 
@@ -43,4 +43,4 @@
 ### Association
 - has_many :members
 - has_many :messages
-- has_meny :users, :through: :members
+- has_meny :users, through: :members
