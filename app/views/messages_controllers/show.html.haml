@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Index:
+  = @messages_controller.index
+
+= link_to 'Edit', edit_messages_controller_path(@messages_controller)
+\|
+= link_to 'Back', messages_controllers_path

@@ -1,0 +1,2 @@
+module MessagesControllersHelper
+end

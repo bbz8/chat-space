@@ -1,0 +1,21 @@
+%h1 Listing messages_controllers
+
+%table
+  %thead
+    %tr
+      %th Index
+      %th
+      %th
+      %th
+
+  %tbody
+    - @messages_controllers.each do |messages_controller|
+      %tr
+        %td= messages_controller.index
+        %td= link_to 'Show', messages_controller
+        %td= link_to 'Edit', edit_messages_controller_path(messages_controller)
+        %td= link_to 'Destroy', messages_controller, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Messages controller', new_messages_controller_path

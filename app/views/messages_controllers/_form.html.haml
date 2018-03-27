@@ -1,0 +1,13 @@
+= form_for @messages_controller do |f|
+  - if @messages_controller.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@messages_controller.errors.count, "error")} prohibited this messages_controller from being saved:"
+      %ul
+        - @messages_controller.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :index
+    = f.text_field :index
+  .actions
+    = f.submit 'Save'
