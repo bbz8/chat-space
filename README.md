@@ -14,21 +14,21 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|integer|null: false, unique: true|
-|mail|integer|null: false, unique: true|
-|password|string|null: false|
+|email|integer|null: false, unique: true|
 
 ### Association
 - has_meny :members
-- has_many :comments
+- has_many :messages
+- has_meny :groups, :throgh => :members
 
-## commentsテーブル
+## messeagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |comments|text| |
-|picture|image| |
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|image|binary| |
+|user_id|integer|null: false|
+|group_id|integer|null: false|
 
 ### Association
 - belongs_to :group
@@ -38,8 +38,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :members
-- has_many :comments
+- has_many :messages
+- has_meny :users, :throgh => :members
