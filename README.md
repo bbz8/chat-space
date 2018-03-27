@@ -13,22 +13,22 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, unique: true|
+|name|integer|null: false, unique index: true|
 |email|integer|null: false, unique: true|
 
 ### Association
 - has_meny :members
 - has_many :messages
-- has_meny :groups, :throgh => :members
+- has_meny :groups, :through: :members
 
 ## messeagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|comments|text| |
-|image|binary| |
-|user_id|integer|null: false|
-|group_id|integer|null: false|
+|body|text| |
+|image|text| |
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -43,4 +43,4 @@
 ### Association
 - has_many :members
 - has_many :messages
-- has_meny :users, :throgh => :members
+- has_meny :users, :through: :members
