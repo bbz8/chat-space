@@ -1,27 +1,40 @@
 @import "./reset";
 
-header
+header{
+}
 body{
-
-}
-
-#sidebar {
-weight : 300px;
-background-color: black;
-height: 900px;
-}
-.side_head{
-background-color: #253141;
-}
-.side_body{
-background-color: #2f3e51;
-}
-#contents{
-background-color: #aaaaaa;
-}
-.content_head{
-
-}
-.content_body{
-
+  height: 100%;
+  width: 100%;
+  .sidebar{
+    height: 100vh;
+    width: 300px;
+    float: left;
+    .side_head{
+    height: 15%;
+    background-color: #253141;
+    }
+    .side_body{
+    height: 85%;
+    background-color: #2f3e51;
+    }
+  }
+  .contents{
+    height: 100vh;
+    float: right;
+    width: calc(100% - 300px);
+      .content_head{
+      font-size: 20px;
+      color: #333333;
+      background-color: blue;
+      height: 15%;
+    }
+    .content_body{
+      //messages部分テンプレート作る
+      background-color: gray;
+      height: 80%;
+    }
+    .counter-foot{
+      height: 5%;
+    }
+  }
 }
