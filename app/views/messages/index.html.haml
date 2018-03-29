@@ -1,20 +1,41 @@
 !!!
 %html
-  .hadear
-  .body
+#head
+#body
+  .header
+    .info_bar
+      チャットグループが作成されました。
+  .main
     .sidebar
-      .side_head ユーザー名
-      .side_body グループリスト
+      .side_head
+        .s_h_content
+          .user_name
+            ユーザー名
+          .new_group
+            .fa.fa-pencil-square-o
+          .user_edit
+            .fa.fa-cog
+      .side_body
+        .groups_list
+          .group
+            .group_name
+              グループ名
+            .group_message
+              グループメッセージ
     .contents
-      .content_head グループ名
+      .content_head
+        .c_h_group
+          .c_h_group_name グループ名
+          .c_h_group_member MEMBER:drdr hapihapi
+        .edit_button edit
       .content_body
-        メッセージ
-        %br
-        seo 2016/09/21 06:16:55
-        %br
-        Hello world!
-        %br
-        neko 2016/09/22 06:16:55
-        %br
-        Good bye world!
-      .content_foot 投稿欄
+        .massages
+          .massage
+            .name drdr
+            .date 2016/09/21 06:16:55
+            .text Hallo World...
+            .name            hapihapi
+            .date            2016/09/22 06:16:55
+            .text            Good bye world!
+      .content_foot
+        .message_form 投稿欄

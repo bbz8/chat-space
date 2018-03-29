@@ -1,40 +1,133 @@
 @import "./reset";
+@import "font-awesome";
 
-header{
+.header{
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: #38AEF0;
+    .info_bar{
+      color: white;
+  }
 }
-body{
+.main{
   height: 100%;
   width: 100%;
   .sidebar{
+    color: white;
     height: 100vh;
     width: 300px;
     float: left;
     .side_head{
     height: 15%;
     background-color: #253141;
+      .s_h_content{
+        height: 100%;
+        width: 100%;
+        padding-top: 26px;
+        padding-left: 40px;
+        .user_name{
+          font-size: 16px;
+          float: left;
+        }
+        .new_group{
+          margin-left: 100px;
+          float: left;
+        }
+        .user_edit{
+          float: left;
+        }
+      }
     }
     .side_body{
     height: 85%;
     background-color: #2f3e51;
+      .group{
+        padding-top: 26px;
+        padding-left: 40px;
+        // margin: 0 20px;
+        .group_name{
+          font-size: 15px;
+        }
+        .group_message{
+          font-size: 11px;
+        }
+      }
     }
   }
   .contents{
     height: 100vh;
     float: right;
     width: calc(100% - 300px);
-      .content_head{
+    .content_head{
+      border: 1px solid;
+      border-color: #eeeeee;
       font-size: 20px;
       color: #333333;
-      background-color: blue;
       height: 15%;
+      .c_h_group{
+        float: left;
+        .c_h_group_name{
+          padding-top: 26px;
+          padding-left: 40px;
+        }
+        .c_h_group_member{
+          padding-top: 20px;
+          padding-left: 40px;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      .edit_button{
+        float: right;
+        border: 1px solid;
+        border-color: #38AEF0;
+        font-size: 15px;
+        padding: 12.5px 20px;
+        margin: 28px 20px 0;
+      }
     }
     .content_body{
-      //messages部分テンプレート作る
-      background-color: gray;
-      height: 80%;
+      line-height: 50px;
+      //messages部分テンプレート作る;
+      height: 85%;
+      .massages{
+        padding-top: 26px;
+        padding-left: 40px;
+        .massage{
+          .name{
+            font-size: 16px;
+            font-variant: bold;
+            color: #434A54;
+            float: left;
+          }
+          .date{
+            float: left;
+            font-size: 12px;
+            color: #999999;
+          }
+          .text{
+            clear: both;
+            font-size: 14px;
+            color: #434A54;
+          }
+        }
+      }
     }
-    .counter-foot{
-      height: 5%;
+    .content_foot{
+      background-color: gray;
+      position: fixed;
+      bottom: 0;
+      height: 90px;
+      width: 100%;
+      .message_form{
+        height: 50px;
+        font-size: 16px;
+        color: #434A54;
+        background-color: white;
+        margin-left: 40px;
+        // padding: 20px 0;
+      }
     }
   }
 }
