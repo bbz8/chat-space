@@ -7,40 +7,35 @@
       チャットグループが作成されました。
   .main
     .sidebar
-      .side_head
-        .s_h_content
-          .user_name
-            ユーザー名
-          .new_group
-            .fa.fa-pencil-square-o
-          .user_edit
-            .fa.fa-cog
-      .side_body
-        .groups_list
-          .group
-            .group_name
-              グループ名
-            .group_message
-              グループメッセージ
+      .side-head
+        .side-head__user-name
+          ユーザー名
+        .side-head__new-group
+          .fa.fa-pencil-square-o
+        .side-head__user-edit
+          .fa.fa-cog
+      .side-body
+        .group
+          .group__name
+            グループ名
+          .group__message
+            グループメッセージ
     .contents
-      .content_head
-        .c_h_box
-          .c_h_group
-            .c_h_group_name グループ名
-            .c_h_group_member MEMBER:drdr hapihapi
-          .edit_button edit
-      .content_body
-        .massages
-          .massage
-            .name drdr
-            .date 2016/09/21 06:16:55
-            .text Hello World...
-            .name            hapihapi
-            .date            2016/09/22 06:16:55
-            .text            Good bye world!
-      .content_foot
-        .foot_box
-          .message_form
-            type a message
-          .fa.fa-image
-          .send_button Send
+      .content-head
+        .content-head__group
+          .content-head__group__name グループ名
+          .content-head__group__member MEMBER:drdr hapihapi
+        .content-head__edit-button edit
+      .content-body
+        .massage
+          .massage__name drdr
+          .massage__date 2016/09/21 06:16:55
+          .massage__text Hello World...
+          .massage__name hapihapi
+          .massage__date 2016/09/22 06:16:55
+          .massage__text Good bye world!
+      .content-foot
+        .content-foot__message-form
+          type a message
+        .fa.fa-image
+        .content-foot__send-button Send

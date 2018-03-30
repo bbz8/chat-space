@@ -15,37 +15,34 @@
     height: 100vh;
     width: 300px;
     float: left;
-    .side_head{
+    .side-head{
     height: 15%;
     background-color: $mainBlackColor;
-      .s_h_content{
-        height: 100%;
-        width: 100%;
+      .side-head__user-name{
+        padding: 26px 0 0 40px;
+        font-size: 16px;
+        float: left;
+      }
+      .side-head__new-group{
         padding-top: 26px;
-        padding-left: 40px;
-        .user_name{
-          font-size: 16px;
-          float: left;
-        }
-        .new_group{
-          margin-left: 100px;
-          float: left;
-        }
-        .user_edit{
-          float: left;
-        }
+        margin-left: 100px;
+        float: left;
+      }
+      .side-head__user-edit{
+        padding-top: 26px;
+        float: left;
       }
     }
-    .side_body{
+    .side-body{
     height: 85%;
     background-color: $subBlackColor;
       .group{
         padding-top: 26px;
         padding-left: 40px;
-        .group_name{
+        .group__name{
           font-size: 15px;
         }
-        .group_message{
+        .group__message{
           font-size: 11px;
         }
       }
@@ -56,103 +53,96 @@
     float: right;
     width: calc(100% - 300px);
     color: $mainTextCalor;
-    .content_head{
+    .content-head{
       border: 1px solid;
       border-color: $mainborderColor;
       font-size: 20px;
       color: $mainHaedingTextColor;
       height: 15%;
-      .c_h_box{
-        margin: 0 40px;
-          .c_h_group{
-          float: left;
-          .c_h_group_name{
-            padding-top: 26px;
-          }
-          .c_h_group_member{
-            padding-top: 20px;
-            font-size: 12px;
-            color: $subTextCalor;
-          }
+      .content-head__group{
+        margin: 28px 40px 0 40px;
+        float: left;
+        .content-head__group__name{
         }
-        .edit_button{
-          float: right;
-          border: 1px solid;
-          border-color: $mainBlueColor;
-          font-size: 15px;
-          padding: 12.5px 20px;
-          margin: 28px 20px 0;
+        .content-head__group__member{
+          padding-top: 20px;
+          font-size: 12px;
+          color: $subTextCalor;
         }
       }
+      .content-head__edit-button{
+        float: right;
+        border: 1px solid;
+        border-color: $mainBlueColor;
+        font-size: 15px;
+        padding: 12.5px 20px;
+        margin: 28px 20px 0;
+      }
     }
-    .content_body{
+    .content-body{
       height: 85%;
-      .massages{
-        padding-top: 26px;
-        padding-left: 40px;
-        .massage{
-          .name{
-            padding-top: 20px;
-            font-size: 16px;
-            font-variant: bold;
-            float: left;
-          }
-          .date{
-            padding-top: 20px;
-            float: left;
-            font-size: 12px;
-            color: $subTextCalor;
-            padding-left: 10px;
-          }
-          .text{
-            clear: both;
-            font-size: 14px;
-            padding-top: 5px;
-          }
+      padding-top: 26px;
+      padding-left: 40px;
+      .massage{
+        .massage__name{
+          padding-top: 20px;
+          font-size: 16px;
+          font-variant: bold;
+          float: left;
+        }
+        .massage__date{
+          padding-top: 20px;
+          float: left;
+          font-size: 12px;
+          color: $subTextCalor;
+          padding-left: 10px;
+        }
+        .massage__text{
+          clear: both;
+          font-size: 14px;
+          padding-top: 5px;
         }
       }
     }
-    .content_foot{
+    .content-foot{
       background-color: $mainGrayColor;
       position: fixed;
       bottom: 0;
       height: 90px;
       width: 100%;
-      .foot_box{
-        margin: 0 40px;
-        .message_form{
-          padding: 0 10px;
-          display: flex;
-          align-items: center;
-          height: 50px;
-          width: calc(100vw - 550px);
-          font-size: 16px;
-          margin:20px 0  20px 0;
-          line-height: auto;
-          float: left;
-          background-color: $mainWhiteColor;
-        }
-        .fa.fa-image{
-          padding-right: 10px;
-          display: flex;
-          align-items: center;
-          height: 50px;
-          margin:20px 0;
-          float: left;
-          background-color: $mainWhiteColor;
-        }
-        .send_button{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 50px;
-          width: 100px;
-          font-size: 16px;
-          color: $mainWhiteColor;
-          background-color: $mainBlueColor;
-          margin:20px 0  20px 15px;
-          float: left;
-        }
+      padding-left: 40px;
+      .content-foot__message-form{
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        width: calc(100vw - 550px);
+        font-size: 16px;
+        margin:20px 0  20px 0;
+        line-height: auto;
+        float: left;
+        background-color: $mainWhiteColor;
+      }
+      .fa.fa-image{
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        margin:20px 0;
+        float: left;
+        background-color: $mainWhiteColor;
+      }
+      .content-foot__send-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 100px;
+        font-size: 16px;
+        color: $mainWhiteColor;
+        background-color: $mainBlueColor;
+        margin:20px 0  20px 15px;
+        float: left;
       }
     }
   }
