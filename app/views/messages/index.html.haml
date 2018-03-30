@@ -12,10 +12,7 @@
         .fa.fa-cog
     .side-body
       .group
-        .group__name
-          グループ名
-        .group__message
-          グループメッセージ
+        = render "group"
   .contents
     .content-head
       .content-head__group
@@ -24,12 +21,7 @@
       .content-head__edit-button edit
     .content-body
       .massage
-        .massage__name drdr
-        .massage__date 2016/09/21 06:16:55
-        .massage__text Hello World...
-        .massage__name hapihapi
-        .massage__date 2016/09/22 06:16:55
-        .massage__text Good bye world!
+        = render "message"
     .content-foot
       .content-foot__message-form
         type a message
