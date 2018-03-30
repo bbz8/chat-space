@@ -1,26 +1,27 @@
 @import "./reset";
 @import "font-awesome";
+@import "./variable";
 
 .header{
   height: 30px;
   width: 100%;
   text-align: center;
-  background-color: #38AEF0;
+  background-color: $mainBlueColor;
     .info_bar{
-      color: white;
+      color: $mainWhiteColor;
   }
 }
 .main{
   height: 100%;
   width: 100%;
   .sidebar{
-    color: white;
+    color: $mainWhiteColor;
     height: 100vh;
     width: 300px;
     float: left;
     .side_head{
     height: 15%;
-    background-color: #253141;
+    background-color: $mainBlackColor;
       .s_h_content{
         height: 100%;
         width: 100%;
@@ -41,11 +42,10 @@
     }
     .side_body{
     height: 85%;
-    background-color: #2f3e51;
+    background-color: $subBlackColor;
       .group{
         padding-top: 26px;
         padding-left: 40px;
-        // margin: 0 20px;
         .group_name{
           font-size: 15px;
         }
@@ -59,11 +59,12 @@
     height: 100vh;
     float: right;
     width: calc(100% - 300px);
+    color: $mainTextCalor;
     .content_head{
       border: 1px solid;
-      border-color: #eeeeee;
+      border-color: $mainborderColor;
       font-size: 20px;
-      color: #333333;
+      color: $mainHaedingTextColor;
       height: 15%;
       .c_h_box{
         margin: 0 40px;
@@ -75,13 +76,13 @@
           .c_h_group_member{
             padding-top: 20px;
             font-size: 12px;
-            color: #999999;
+            color: $subTextCalor;
           }
         }
         .edit_button{
           float: right;
           border: 1px solid;
-          border-color: #38AEF0;
+          border-color: $mainBlueColor;
           font-size: 15px;
           padding: 12.5px 20px;
           margin: 28px 20px 0;
@@ -98,27 +99,25 @@
             padding-top: 20px;
             font-size: 16px;
             font-variant: bold;
-            color: #434A54;
             float: left;
           }
           .date{
             padding-top: 20px;
             float: left;
             font-size: 12px;
-            color: #999999;
+            color: $subTextCalor;
             padding-left: 10px;
           }
           .text{
             clear: both;
             font-size: 14px;
-            color: #434A54;
             padding-top: 5px;
           }
         }
       }
     }
     .content_foot{
-      background-color: gray;
+      background-color: $mainGrayColor;
       position: fixed;
       bottom: 0;
       height: 90px;
@@ -132,11 +131,10 @@
           height: 50px;
           width: calc(100vw - 550px);
           font-size: 16px;
-          color: #434A54;
-          background-color: white;
           margin:20px 0  20px 0;
           line-height: auto;
           float: left;
+          background-color: $mainWhiteColor;
         }
         .fa.fa-image{
           padding-right: 10px;
@@ -145,8 +143,7 @@
           height: 50px;
           margin:20px 0;
           float: left;
-          background-color: white;
-          color: #434A54;
+          background-color: $mainWhiteColor;
         }
         .send_button{
           display: flex;
@@ -155,8 +152,8 @@
           height: 50px;
           width: 100px;
           font-size: 16px;
-          color: #fff;
-          background-color: #38AEF0;
+          color: $mainWhiteColor;
+          background-color: $mainBlueColor;
           margin:20px 0  20px 15px;
           float: left;
         }
