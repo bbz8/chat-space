@@ -10,17 +10,17 @@
 .main{
   height: 100%;
   width: 100%;
+  font-size: 16px;
   .sidebar{
-    color: $mainWhiteColor;
     height: 100vh;
     width: 300px;
+    color: $mainWhiteColor;
     float: left;
     .side-head{
     height: 15%;
     background-color: $mainBlackColor;
       .side-head__user-name{
         padding: 26px 0 0 40px;
-        font-size: 16px;
         float: left;
       }
       .side-head__new-group{
@@ -37,8 +37,7 @@
     height: 85%;
     background-color: $subBlackColor;
       .group{
-        padding-top: 26px;
-        padding-left: 40px;
+        padding: 26px 0 0 40px;
         .group__name{
           font-size: 15px;
         }
@@ -50,15 +49,15 @@
   }
   .contents{
     height: 100vh;
-    float: right;
     width: calc(100% - 300px);
     color: $mainTextCalor;
+    float: right;
     .content-head{
+      height: 15%;
       border: 1px solid;
       border-color: $mainborderColor;
       font-size: 20px;
       color: $mainHaedingTextColor;
-      height: 15%;
       .content-head__group{
         margin: 28px 40px 0 40px;
         float: left;
@@ -81,21 +80,18 @@
     }
     .content-body{
       height: 85%;
-      padding-top: 26px;
-      padding-left: 40px;
+      padding: 26px 0 0 40px;
       .massage{
         .massage__name{
           padding-top: 20px;
-          font-size: 16px;
           font-variant: bold;
           float: left;
         }
         .massage__date{
-          padding-top: 20px;
+          padding: 20px 0 0 10px;
           float: left;
           font-size: 12px;
           color: $subTextCalor;
-          padding-left: 10px;
         }
         .massage__text{
           clear: both;
@@ -105,11 +101,11 @@
       }
     }
     .content-foot{
+      height: 90px;
+      width: 100%;
       background-color: $mainGrayColor;
       position: fixed;
       bottom: 0;
-      height: 90px;
-      width: 100%;
       padding-left: 40px;
       .content-foot__message-form{
         padding: 0 10px;
@@ -118,8 +114,7 @@
         height: 50px;
         width: calc(100vw - 550px);
         font-size: 16px;
-        margin:20px 0  20px 0;
-        line-height: auto;
+        margin: 20px 0;
         float: left;
         background-color: $mainWhiteColor;
       }
@@ -138,7 +133,6 @@
         justify-content: center;
         height: 50px;
         width: 100px;
-        font-size: 16px;
         color: $mainWhiteColor;
         background-color: $mainBlueColor;
         margin:20px 0  20px 15px;
