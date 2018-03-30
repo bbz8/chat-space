@@ -19,16 +19,16 @@
     .side-head{
     height: 15%;
     background-color: $mainBlackColor;
-      .side-head__user-name{
+      &__user-name{
         padding: 26px 0 0 40px;
         float: left;
       }
-      .side-head__new-group{
+      &__new-group{
         padding-top: 26px;
         margin-left: 100px;
         float: left;
       }
-      .side-head__user-edit{
+      &__user-edit{
         padding-top: 26px;
         float: left;
       }
@@ -36,13 +36,13 @@
     .side-body{
     height: 85%;
     background-color: $subBlackColor;
-      .group{
+      ul{
         padding: 26px 0 0 40px;
-        .group__name{
+        li{
           font-size: 15px;
           margin-bottom: 5px;
         }
-        .group__message{
+        p{
           font-size: 11px;
           margin-bottom: 40px;
         }
@@ -60,18 +60,18 @@
       border-color: $mainborderColor;
       font-size: 20px;
       color: $mainHaedingTextColor;
-      .content-head__group{
+      &__group{
         margin: 28px 40px 0 40px;
         float: left;
-        .content-head__group__name{
+        &__name{
         }
-        .content-head__group__member{
+        &__member{
           padding-top: 20px;
           font-size: 12px;
           color: $subTextCalor;
         }
       }
-      .content-head__edit-button{
+      &__edit-button{
         float: right;
         border: 1px solid;
         border-color: $mainBlueColor;
@@ -83,22 +83,24 @@
     .content-body{
       height: 85%;
       padding: 26px 0 0 40px;
-      .massage{
-        .massage__name{
-          padding-top: 20px;
-          font-variant: bold;
-          float: left;
-        }
-        .massage__date{
-          padding: 20px 0 0 10px;
-          float: left;
-          font-size: 12px;
-          color: $subTextCalor;
-        }
-        .massage__text{
-          clear: both;
-          font-size: 14px;
-          padding-top: 5px;
+      ul{
+        ul{
+          li.name{
+            padding-top: 20px;
+            font-variant: bold;
+            float: left;
+          }
+          li.date{
+            padding: 20px 0 0 10px;
+            float: left;
+            font-size: 12px;
+            color: $subTextCalor;
+          }
+          p{
+            clear: both;
+            font-size: 14px;
+            padding-top: 5px;
+          }
         }
       }
     }
@@ -109,7 +111,7 @@
       position: fixed;
       bottom: 0;
       padding-left: 40px;
-      .content-foot__message-form{
+      &__message-form{
         padding: 0 10px;
         display: flex;
         align-items: center;
@@ -129,7 +131,7 @@
         float: left;
         background-color: $mainWhiteColor;
       }
-      .content-foot__send-button{
+      &__send-button{
         display: flex;
         align-items: center;
         justify-content: center;
