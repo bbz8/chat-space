@@ -65,51 +65,54 @@
       font-size: 20px;
       color: #333333;
       height: 15%;
-      .c_h_group{
-        float: left;
-        .c_h_group_name{
-          padding-top: 26px;
-          padding-left: 40px;
+      .c_h_box{
+        margin: 0 40px;
+          .c_h_group{
+          float: left;
+          .c_h_group_name{
+            padding-top: 26px;
+          }
+          .c_h_group_member{
+            padding-top: 20px;
+            font-size: 12px;
+            color: #999999;
+          }
         }
-        .c_h_group_member{
-          padding-top: 20px;
-          padding-left: 40px;
-          font-size: 12px;
-          color: #999999;
+        .edit_button{
+          float: right;
+          border: 1px solid;
+          border-color: #38AEF0;
+          font-size: 15px;
+          padding: 12.5px 20px;
+          margin: 28px 20px 0;
         }
-      }
-      .edit_button{
-        float: right;
-        border: 1px solid;
-        border-color: #38AEF0;
-        font-size: 15px;
-        padding: 12.5px 20px;
-        margin: 28px 20px 0;
       }
     }
     .content_body{
-      line-height: 50px;
-      //messages部分テンプレート作る;
       height: 85%;
       .massages{
         padding-top: 26px;
         padding-left: 40px;
         .massage{
           .name{
+            padding-top: 20px;
             font-size: 16px;
             font-variant: bold;
             color: #434A54;
             float: left;
           }
           .date{
+            padding-top: 20px;
             float: left;
             font-size: 12px;
             color: #999999;
+            padding-left: 10px;
           }
           .text{
             clear: both;
             font-size: 14px;
             color: #434A54;
+            padding-top: 5px;
           }
         }
       }
@@ -120,13 +123,43 @@
       bottom: 0;
       height: 90px;
       width: 100%;
-      .message_form{
-        height: 50px;
-        font-size: 16px;
-        color: #434A54;
-        background-color: white;
-        margin-left: 40px;
-        // padding: 20px 0;
+      .foot_box{
+        margin: 0 40px;
+        .message_form{
+          padding: 0 10px;
+          display: flex;
+          align-items: center;
+          height: 50px;
+          width: calc(100vw - 550px);
+          font-size: 16px;
+          color: #434A54;
+          background-color: white;
+          margin:20px 0  20px 0;
+          line-height: auto;
+          float: left;
+        }
+        .fa.fa-image{
+          padding-right: 10px;
+          display: flex;
+          align-items: center;
+          height: 50px;
+          margin:20px 0;
+          float: left;
+          background-color: white;
+          color: #434A54;
+        }
+        .send_button{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          width: 100px;
+          font-size: 16px;
+          color: #fff;
+          background-color: #38AEF0;
+          margin:20px 0  20px 15px;
+          float: left;
+        }
       }
     }
   }
