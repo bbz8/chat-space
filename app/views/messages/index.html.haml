@@ -1,0 +1,27 @@
+.header
+  .info_bar
+    チャットグループが作成されました。
+.main
+  .sidebar
+    .side-head
+      .side-head__user-name
+        ユーザー名
+      .side-head__new-group
+        .fa.fa-pencil-square-o
+      .side-head__user-edit
+        .fa.fa-cog
+    .side-body
+      = render "group"
+  .contents
+    .content-head
+      .content-head__group
+        .content-head__group__name グループ名
+        .content-head__group__member MEMBER:drdr hapihapi
+      .content-head__edit-button edit
+    .content-body
+      = render "message"
+    .content-foot
+      .content-foot__message-form
+        type a message
+      .fa.fa-image
+      .content-foot__send-button Send

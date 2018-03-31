@@ -1,0 +1,147 @@
+.header{
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: $mainBlueColor;
+    .info_bar{
+      color: $mainWhiteColor;
+  }
+}
+.main{
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  .sidebar{
+    height: 100vh;
+    width: 300px;
+    color: $mainWhiteColor;
+    float: left;
+    .side-head{
+    height: 15%;
+    background-color: $mainBlackColor;
+      &__user-name{
+        padding: 26px 0 0 40px;
+        float: left;
+      }
+      &__new-group{
+        padding-top: 26px;
+        margin-left: 100px;
+        float: left;
+      }
+      &__user-edit{
+        padding-top: 26px;
+        float: left;
+      }
+    }
+    .side-body{
+    height: 85%;
+    background-color: $subBlackColor;
+      ul{
+        padding: 26px 0 0 40px;
+        li{
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        p{
+          font-size: 11px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  .contents{
+    height: 100vh;
+    width: calc(100% - 300px);
+    color: $mainTextCalor;
+    float: right;
+    .content-head{
+      height: 15%;
+      border: 1px solid;
+      border-color: $mainborderColor;
+      font-size: 20px;
+      color: $mainHaedingTextColor;
+      &__group{
+        margin: 28px 40px 0 40px;
+        float: left;
+        &__name{
+        }
+        &__member{
+          padding-top: 20px;
+          font-size: 12px;
+          color: $subTextCalor;
+        }
+      }
+      &__edit-button{
+        float: right;
+        border: 1px solid;
+        border-color: $mainBlueColor;
+        font-size: 15px;
+        padding: 12.5px 20px;
+        margin: 28px 20px 0;
+      }
+    }
+    .content-body{
+      height: 85%;
+      padding: 26px 0 0 40px;
+      ul{
+        ul{
+          li.name{
+            padding-top: 20px;
+            font-variant: bold;
+            float: left;
+          }
+          li.date{
+            padding: 20px 0 0 10px;
+            float: left;
+            font-size: 12px;
+            color: $subTextCalor;
+          }
+          p{
+            clear: both;
+            font-size: 14px;
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+    .content-foot{
+      height: 90px;
+      width: 100%;
+      background-color: $mainGrayColor;
+      position: fixed;
+      bottom: 0;
+      padding-left: 40px;
+      &__message-form{
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        width: calc(100vw - 550px);
+        font-size: 16px;
+        margin: 20px 0;
+        float: left;
+        background-color: $mainWhiteColor;
+      }
+      .fa.fa-image{
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        margin:20px 0;
+        float: left;
+        background-color: $mainWhiteColor;
+      }
+      &__send-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 100px;
+        color: $mainWhiteColor;
+        background-color: $mainBlueColor;
+        margin:20px 0  20px 15px;
+        float: left;
+      }
+    }
+  }
+}
