@@ -6,10 +6,11 @@
     .side-head
       .side-head__user-name
         ユーザー名
-      .side-head__new-group
-        .fa.fa-pencil-square-o
-      .side-head__user-edit
-        .fa.fa-cog
+      %a.side-head__new-group{:href => "/groups/new"}
+        %i.fa.fa-pencil-square-o
+      %a.side-head__user-edit{:href => "/users/:id/edit"}
+        %i.fa.fa-cog
+
     .side-body
       = render "group"
   .contents
