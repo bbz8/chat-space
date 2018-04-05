@@ -1,22 +1,4 @@
-/ .header
-/   .info_bar
-/     チャットグループが作成されました。
-/ .main
-/ .sidebar
 = render partial: "devise/shared/side_bar"
-/ .side-head
-/   .side-head__user-name
-/     ユーザー名
-/   .side-head__icons
-/     = link_to new_group_path(current_user) do
-/       %i.fa.fa-pencil-square-o
-/     = link_to edit_user_path(current_user), class: 'side-head__user-edit' do
-/       %i.fa.fa-cog
-/%a.side-head__user-edit{:href => "/users/#{current_user.id}/edit"}
-/ .side-head__user-edit
-/   = link_to edit_user_path(current_user) do
-/     = fa_icon 'cog', class 'icon'
-/ .side-body
 
 .contents
   .content-head
@@ -25,9 +7,13 @@
       .content-head__group__member MEMBER:drdr hapihapi
     .content-head__edit-button edit
   .content-body
-    = render "message"
-  .content-foot
-    .content-foot__message-form
-      type a message
-    .fa.fa-image
-    .content-foot__send-button Send
+
+
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
