@@ -1,19 +1,20 @@
-= render partial: "devise/shared/side_bar"
+.body
+  = render partial: "devise/shared/side_bar"
 
-.contents
-  .content-head
-    .content-head__group
-      .content-head__group__name グループ名
-      .content-head__group__member MEMBER:drdr hapihapi
-    .content-head__edit-button edit
-  .content-body
+  .contents
+    .content-head
+      .content-head__group
+        .content-head__group__name グループ名
+        .content-head__group__member MEMBER:drdr hapihapi
+      .content-head__edit-button edit
+    .content-body
+      = render @messages
 
-
-  .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
