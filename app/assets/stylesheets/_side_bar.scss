@@ -33,10 +33,13 @@
 // }
 @import"./colors";
 .side-bar {
+  position: fixed;
+  left: 0;
   box-sizing: border-box;
   color: $white;
   width: 300px;
   float: left;
+  height: 100%;
   .header {
     background-color: $side_blue_dark;
     height: 100px;
