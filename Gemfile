@@ -42,6 +42,10 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'factory_girl_rails', "~>4.4.1"
+  gem 'faker'
 end
 
 group :development do
@@ -62,3 +66,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'mini_magick'
+
+group :test do
+  gem 'faker'
+end
