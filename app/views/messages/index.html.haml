@@ -7,6 +7,10 @@
         .content-head__group__name グループ名
         .content-head__group__member MEMBER:drdr hapihapi
       .content-head__edit-button edit
+
+      / = current_user.groups
+      / =  group.name
+      / = render @current_user_group
     .content-body
       = render @messages
 
@@ -18,3 +22,4 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
+
