@@ -1,4 +1,14 @@
 $(function(){
+  function buildHTML(message){
+    var html = `<p>
+                  <strong>
+                    <a href=${message.id}>${message.user_name}</a>
+                    ：
+                  </strong>
+                  ${message.content}
+                </p>`
+    return html;
+  }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
