@@ -7,6 +7,7 @@ body{
     float: right;
     .content-head{
       height: 100px;
+      width: 100%;
       border: 1px solid;
       border-color: $mainborderColor;
       font-size: 20px;
@@ -32,8 +33,9 @@ body{
       }
     }
     .content-body{
-      // height: calc(100vh - 220px);
-      padding: 26px 0 100px 40px;
+      overflow: scroll;
+      height: calc(100vh - 200px);
+      padding: 0 0 0px 40px;
 
       ul{
         ul{
