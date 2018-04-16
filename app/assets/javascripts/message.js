@@ -9,7 +9,7 @@ $(function(){
                 </p>`
     return html;
   }
-  $('#new_message').on('submit', function(e){
+  $('#create_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -26,5 +26,8 @@ $(function(){
       $('.messages').append(html)
       $('.form__message').val('')
     })
-  })
-})
+    .fail(function() {
+      alert('error');
+    });
+  });
+});
