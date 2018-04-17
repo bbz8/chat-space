@@ -10,7 +10,7 @@ $(function(){
                   <li class="lower-meesage">
                   </li>
                   <p class="lower-message__content">
-                    ${message.text}
+                    ${message.content}
                   </p>
                 </ul>`
     return html;
