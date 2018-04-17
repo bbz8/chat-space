@@ -25,7 +25,7 @@ $(function(){
       data: formData,
       dataType: 'json',
       processData: false,
-      contentType: false
+      contentType: false,
     })
     .done(function(data){
       var html = buildHTML(data);
@@ -36,7 +36,6 @@ $(function(){
     .fail(function() {
       alert('error');
     })
+return false
   })
-  return false;
 });
-
