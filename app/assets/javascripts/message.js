@@ -1,17 +1,22 @@
 $(function(){
   function buildHTML(message){
+    var picture =((message.image.url)
+    ? (`<img class="lower-message__image" src="${message.image.url}">`)
+    :("")
+    );
     var html = `<ul>
                   <li class="name">
                     ${message.user_name}
                   </li>
                   <li class="date">
-                    ${message.time}
+                    ${message.created_at}
                   </li>
                   <li class="lower-meesage">
                   </li>
                   <p class="lower-message__content">
                     ${message.content}
                   </p>
+                    ${picture}
                 </ul>`
     return html;
   }
