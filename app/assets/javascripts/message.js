@@ -1,15 +1,20 @@
 $(function(){
   function buildHTML(message){
-    var html = `<p>
-                  <strong>
-                    <a href=${message.id}>${message.user_name}</a>
-                    ：
-                  </strong>
-                  ${message.content}
-                </p>`
+    var html = `<ul>
+                  <ul>
+                    <li class="name">
+                    </li>
+                    <li class="date">
+                    </li>
+                    <li class="lower-meesage">
+                    </li>
+                    <p class="lower-message__content">
+                    </p>
+                  </ul>
+                </ul>`
     return html;
   }
-  $('#create_message').on('submit', function(e){
+  $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -25,9 +30,12 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.form__message').val('')
+      $('.content-body').animate({scrollTop: $('.content-body')[0].scrollHeight})
     })
     .fail(function() {
       alert('error');
-    });
-  });
+    })
+  return false;
+  })
 });
+
