@@ -17,3 +17,7 @@
 /yarn-error.log
 
 .byebug_history
+
+public/uploads/message/image/225/download-4.jpg
+
+*.jpg
