@@ -1,11 +1,10 @@
 %ul
-  %ul
-    %li.name
-      = message.user.name
-    %li.date
-      = message.created_at
-    %li.lower-meesage
-    - if message.content.present?
-      %p.lower-message__content
-        = message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  %li.name
+    = message.user.name
+  %li.date
+    = message.created_at
+  %li.lower-meesage
+  - if message.content.present?
+    %p.lower-message__content
+      = message.content
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
