@@ -1,9 +1,5 @@
 $(function(){
-  function buildHTML(message){
-    var picture =((message.image.url)
-    ? (`<img class="lower-message__image" src="${message.image.url}">`)
-    :("")
-    );
+  function buildHTML(message){var picture =((message.image.url)? (`<img class="lower-message__image" src="${message.image.url}">`):(""));
     var html = `<ul>
                   <li class="name">
                     ${message.user_name}
@@ -41,6 +37,6 @@ $(function(){
     .fail(function() {
       alert('error');
     })
-return false
+    return false
   })
 });
