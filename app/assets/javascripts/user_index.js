@@ -12,3 +12,12 @@
             appendUser(user);
           });
       });
+    }else if (input.length === 0){
+      return false;
+    }else{
+      alert("ユーザー検索に失敗しました");
+    }
+  });
+});
+
+
