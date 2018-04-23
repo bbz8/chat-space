@@ -39,7 +39,7 @@ $(function() {
       alert("ユーザー検索に失敗しました");
     }
   });
-  searchName.on('click','a',function(){
+  searchName.on('click','.chat-group-user__btn--add',function(){
     let user = {};
     user.name = $(this).data('user-name');
     user.id = $(this).data('user-id');
