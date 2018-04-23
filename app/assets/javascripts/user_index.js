@@ -1,8 +1,6 @@
 $(function() {
-  let inputName = $("#user-search-field")
   let searchName = $("#user-search-result");
   let chatMember = $("#chat-group-users");
-  let addUser = $('')
   function appendUser(user)  {
     let html =`<div class="chat-group-user clearfix">
                 <p class="chat-group-user__name">${user.name}</p>
@@ -51,5 +49,3 @@ $(function() {
     $(this).parent().remove();
   });
 });
-
-
