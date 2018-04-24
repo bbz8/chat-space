@@ -16,20 +16,6 @@ $(function(){
                 </ul>`
     return html;
   }
-  function buildHTML(message) {
-  var insertImage = '';
-  if (message.image.url) {
-    insertImage = `<img src="${message.image.url}">`;
-  }
-  var html = `
-    <div class="chat" data-message-id="${message.id}">
-      <p class="chat__user">${message.name}</p>
-      <p class="chat__date">${message.date}</p>
-      <p class="chat__content">${message.body}</p>
-      ${insertImage}
-    </div>`;
-  return html
-  }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -53,28 +39,26 @@ $(function(){
     })
     return false
   })
-  setInterval(function() {
-    $.ajax({
-      url: location.href.json,
-    })
-    .done(function(json) {
-      var id = $('.chat').data('messageId');
-      var insertHTML = '';
-      json.messages.forEach(function(message) {
-        if (message.id > id ) {
-          insertHTML += buildHTML(message);
-        }
-      });
-      $('.chat-wrapper').prepend(insertHTML);
-    })
-    .fail(function(data) {
-      alert('自動更新に失敗しました');
+  var interval = setInterval(function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+  $.ajax({
+    url: location.href.json,
+  })
+  .done(function(json) {
+    var id = $('.chat').data('messageId');
+    var insertHTML = '';
+    json.messages.forEach(function(message) {
+      if (message.id > id ) {
+        insertHTML += buildHTML(message);
+      }
     });
-    .fail(function(data) {
-    });
-    } else {
-      clearInterval(interval);
-  } , 5000 );
-});
+    $('.chat-wrapper').prepend(insertHTML);
+  })
+  .fail(function(json) {
+    alert('自動更新に失敗しました');
+  });
+  } else {
+    clearInterval(interval);
+  }} , 5 * 1000 );
 });
 
