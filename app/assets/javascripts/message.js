@@ -16,12 +16,6 @@ $(function(){
                 </ul>`
     return html;
   }
-  function buildHTML(message) {
-  var insertImage = '';
-  if (message.image.url) {
-    insertImage = `<img src="${message.image.url}">`;
-  }
-  }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
