@@ -16,6 +16,12 @@ $(function(){
                 </ul>`
     return html;
   }
+  function buildHTML(message) {
+  var insertImage = '';
+  if (message.image.url) {
+    insertImage = `<img src="${message.image.url}">`;
+  }
+  }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -43,6 +49,11 @@ $(function(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
   $.ajax({
     url: location.href.json,
+    type: "GET",
+    data: false,
+    dataType: 'json',
+    processData: false,
+    contentType: false
   })
   .done(function(json) {
     var id = $('.chat').data('messageId');
