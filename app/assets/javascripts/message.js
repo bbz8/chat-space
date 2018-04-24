@@ -58,11 +58,14 @@ $(function(){
       url: location.href.json,
     })
     .done(function(json) {
+      var id = $('.chat').data('messageId');
       var insertHTML = '';
       json.messages.forEach(function(message) {
-        insertHTML += buildHTML(message);
+        if (message.id > id ) {
+          insertHTML += buildHTML(message);
+        }
       });
-      $('.chat-wrapper').html(insertHTML);
+      $('.chat-wrapper').prepend(insertHTML);
     })
     .fail(function(data) {
       alert('自動更新に失敗しました');
