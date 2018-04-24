@@ -16,6 +16,20 @@ $(function(){
                 </ul>`
     return html;
   }
+  function buildHTML(message) {
+  var insertImage = '';
+  if (message.image.url) {
+    insertImage = `<img src="${message.image.url}">`;
+  }
+  var html = `
+    <div class="chat" data-message-id="${message.id}">
+      <p class="chat__user">${message.name}</p>
+      <p class="chat__date">${message.date}</p>
+      <p class="chat__content">${message.body}</p>
+      ${insertImage}
+    </div>`;
+  return html
+  }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -43,8 +57,16 @@ $(function(){
     $.ajax({
       url: location.href.json,
     })
-    .done(function(data) {
+    .done(function(json) {
+      var insertHTML = '';
+      json.messages.forEach(function(message) {
+        insertHTML += buildHTML(message);
+      });
+      $('.chat-wrapper').html(insertHTML);
     })
+    .fail(function(data) {
+      alert('自動更新に失敗しました');
+    });
     .fail(function(data) {
     });
     } else {
