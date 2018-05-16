@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){var picture =((message.image.url)? (`<img class="lower-message__image" src="${message.image.url}">`):(""));
-    var html = `<ul>
+    var html = `<ul data-message-id ="${message.id}">
                   <li class="name">
                     ${message.user_name}
                   </li>
@@ -16,6 +16,7 @@ $(function(){
                 </ul>`
     return html;
   }
+  var lastId = $("ul:last").data("message-id");
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -44,20 +45,20 @@ $(function(){
   $.ajax({
     url: location.href.json,
     type: "GET",
-    data: false,
+    data: { id : lastId },
     dataType: 'json',
     processData: false,
     contentType: false
   })
   .done(function(json) {
-    var id = $('.chat').data('messageId');
     var insertHTML = '';
     json.messages.forEach(function(message) {
-      if (message.id > id ) {
-        insertHTML += buildHTML(message);
-      }
+      // if (message.id > id ) {
+      //   insertHTML += buildHTML(message);
+      // }
     });
-    $('.chat-wrapper').prepend(insertHTML);
+
+    $('.content-body').append(insertHTML);
   })
   .fail(function(json) {
     alert('自動更新に失敗しました');
