@@ -1,3 +1,4 @@
+var messagesDiv = $('.messages')
 $(function(){
   function buildHTML(message){var picture =((message.image.url)? (`<img class="lower-message__image" src="${message.image.url}">`):(""));
     var html = `<ul data-message-id ="${message.id}">
@@ -43,24 +44,21 @@ $(function(){
   var interval = setInterval(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
   $.ajax({
-    url: location.href.json,
+    url: location.href,
     type: "GET",
     data: { id : lastId },
     dataType: 'json',
     processData: false,
     contentType: false
   })
-  .done(function(json) {
+  .done(function(data) {
     var insertHTML = '';
-    json.messages.forEach(function(message) {
-      // if (message.id > id ) {
-      //   insertHTML += buildHTML(message);
-      // }
+    data.messages.forEach(function(message){
+      insertHTML += buildHTML(message);
     });
-
-    $('.content-body').append(insertHTML);
+    messagesDiv.append(insertHTML);
   })
-  .fail(function(json) {
+  .fail(function(data) {
     alert('自動更新に失敗しました');
   });
   } else {
